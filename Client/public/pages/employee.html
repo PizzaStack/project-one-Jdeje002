@@ -15,75 +15,119 @@
 </head>
 
 <body>
-   
 
-   
-        <div id="nav">
-            <nav class="navbar navbar-light bg-light ">
-                <div class="container">
-                        <h1><a class="navbar-brand" href="#top">De Jesus Tech</a></h1>
-                        <div>
-                            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-                                <li class="nav-item">
-                                    <div id="UserName"></div>
-                                </li>
-                            </ul>
-                        </div>
+
+
+    <div id="nav">
+        <nav class="navbar navbar-light bg-light ">
+            <div class="container">
+                <h1><a class="navbar-brand" href="#top">De Jesus Tech</a></h1>
+                <div>
+                    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <div id="UserName"></div>
+                        </li>
+                    </ul>
                 </div>
-                
-            </nav>
-        </div>
+            </div>
 
-        <div class="container-fluid/">
-            <div class="row">
-                <div class="col-lg-2">
-                    <div class="text-center sideMenu">
-                    <div>
-                        <h1>Welcome</h1>
-                        <div id=" user_name_Enter here"></div>
+        </nav>
+    </div>
+
+    <div class="container-fluid/">
+        <div class="row">
+            <div class="col-lg-2">
+                <div class="text-center sideMenu">
+                    <div class="card" style="width: 13rem;">
+                        <img class="card-img-top" src="../assets/profile-placeholder.png" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title" id="user_Name" aria-placeholder="Name">Name:</h5>
+                            <p class="card-text" id="user_Work_Site" aria-placeholder="WorkSite">WorkSite:</p>
+                            <p class="card-text" id="user_Work_Number" aria-placeholder="Phone Number">Phone Number:
+                            </p>
+                            <p class="card-text" id="user_Work_Email" aria-placeholder="Email">Email: </p>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit_User_Profile">
+                                Edit Profile
+                            </button>
+                        </div>
                     </div>
-                    <br><br>
                     <hr>
-                    </div>
+
+                    <hr>
+                    <a href="#" class="btn btn-primary" Id="user_log_out_Btn">Log Out</a>
                 </div>
-                <div class="col-lg-9">
-                    <div id="content_Management">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-lg-3"></div>
-                                <div class="col-lg-3"></div>
-                                <div class="col-lg-3"></div>
-                            </div>
+            </div>
+            <div class="col-lg-9">
+                <div id="content_Management">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-3"></div>
+                            <div class="col-lg-3"></div>
+                            <div class="col-lg-3"></div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-1"></div>
-                    
+            </div>
+            <div class="col-lg-1"></div>
+
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="edit_User_Profile" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="#edit_User_Profile_Lable">Edit Profile</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        
+                        <div class="form-group">
+                          <label for="Change_Work_Site">Work Site</label>
+                          <input type="text" class="form-control" id="Change_Work_Site" placeholder="Work Site">
+                        </div>
+                        <div class="form-group">
+                            <label for="Change_Email">Email</label>
+                            <input type="text" class="form-control" id="Change_Email" placeholder="E-mail">
+                          </div>
+                          <div class="form-group">
+                            <label for="Change_Phone_Number">PhoneNumber</label>
+                            <input type="text" class="form-control" id="Change_Phone_Number" placeholder="E-mail">
+                          </div>
+                      </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
             </div>
         </div>
-               
-               
-       
-       
-                <div class="navbar navbar-expand-lg navbar-light bg-light" id="footer">
-                    <div class="container">
-                            <span> DeJesus Tech</span>
+    </div>
 
-                            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#"><i class="fab fa-facebook"></i> Facebook</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#"><i class="fab fa-twitter-square"></i> Twiiter</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#"><i class="fab fa-instagram"></i> Instagram</a>
-                                </li>
-                            </ul>
-                
-                    </div>
-            
+
+
+    <div class="navbar navbar-expand-lg navbar-light bg-light" id="footer">
+        <div class="container">
+            <span> DeJesus Tech</span>
+
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fab fa-facebook"></i> Facebook</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fab fa-twitter-square"></i> Twiiter</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                </li>
+            </ul>
+
         </div>
+
+    </div>
 
 
     <!-- Optional JavaScript -->
