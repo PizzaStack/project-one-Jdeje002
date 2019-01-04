@@ -52,26 +52,56 @@
                         </div>
                     </div>
                     <hr>
-
-                    <hr>
                     <a href="index.html" class="btn btn-primary" Id="user_log_out_Btn">Log Out</a>
                 </div>
             </div>
-            <div class="col-lg-9">
+            <div class="col-lg-10">
                 <div id="content_Management">
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-3"></div>
-                            <div class="col-lg-3"></div>
-                            <div class="col-lg-3"></div>
+                            <div class="col-lg-3">
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#upload_request">
+                                    Upload Reimbursement Request
+                                </button>
+                            </div>
+                            <div class="col-lg-9">
+                                <button type="button" class="btn btn-primary">View Reimbursement Request</button>
+                            </div>
+                           
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-1"></div>
+           
 
         </div>
     </div>
+     <!-- Modal upload-->
+     <!-- Modal -->
+<div class="modal fade" id="upload_request" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Upload Reimbursement Request</h5>
+          
+        </div>
+        <div class="modal-body">
+            <form class="md-form" action="#">
+                <div class="file-field">
+                  <div id ="upload_file"class="btn btn-primary btn-sm float-left">
+                    <span>Choose files</span>
+                    <input type="file" multiple>
+                  </div>
+                </div>
+              </form>
+            <button id ="submit_upload_file"class="btn btn-primary btn-sm float-right">Submit</button>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
     <!-- Modal Change Info-->
     <div class="modal fade" id="edit_User_Profile" tabindex="-1" role="dialog" 
         aria-hidden="true">
