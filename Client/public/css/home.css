@@ -1,8 +1,6 @@
 body{
     background: black;
-   
     background: -webkit-linear-gradient(to right, rgb(10, 3, 2), rgb(32, 13, 13), rgb(13, 37, 41));
- 
     background: linear-gradient(to right, rgb(5, 34, 82), rgb(7, 41, 58), gray);
 }
 #footer{        
