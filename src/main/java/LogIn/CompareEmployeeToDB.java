@@ -8,11 +8,12 @@ import Dao.ConnectToDB;
 
 public class CompareEmployeeToDB {
 	private String compareEmployeePassword;
-
-	ConnectToDB ctdb = new ConnectToDB();
+	
+	
 
 	public String CompareUsername(String userName) {
-		compareEmployeePassword = null;
+		ConnectToDB ctdb = new ConnectToDB();
+		
 
 		ctdb.connectToDatabase();
 		try {
@@ -21,9 +22,7 @@ public class CompareEmployeeToDB {
 			ResultSet rs = ps.executeQuery();
 
 			while (rs.next()) {
-
 				compareEmployeePassword = rs.getString(1);
-
 			}
 
 		} catch (SQLException e) {
@@ -31,7 +30,9 @@ public class CompareEmployeeToDB {
 			e.printStackTrace();
 		}
 		ctdb.closeDatabase();
+		
 		return compareEmployeePassword;
+		
 	}
 
 }

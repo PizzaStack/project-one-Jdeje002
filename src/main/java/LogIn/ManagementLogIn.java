@@ -11,8 +11,6 @@ public class ManagementLogIn {
 		
 		if(compareManagementPassword == null ) {
 			
-			
-			
 		}
 		else if (compareManagementPassword.equals(password) ) {
 			System.out.println("management");

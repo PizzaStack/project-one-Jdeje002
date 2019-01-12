@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import LogIn.EmployeeLogIn;
-import LogIn.UserLogIn;
+
 
 public class LogInServlet extends HttpServlet {
 	

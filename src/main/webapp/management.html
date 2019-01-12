@@ -46,9 +46,8 @@
                                 <p class="card-text" id="user_Work_Number" aria-placeholder="Phone Number">Phone Number:
                                 </p>
                                 <p class="card-text" id="user_Work_Email" aria-placeholder="Email">Email: </p>
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit_User_Profile">
-                                    Edit Profile
-                                </button>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit_User_Profile">Edit Profile</button>
+						
                             </div>
                         </div>
                         <hr>
@@ -75,7 +74,38 @@
         </div>
                
                
-       
+       <!-- Modal Change Info-->
+	<div class="modal fade" id="edit_User_Profile" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="#edit_User_Profile_Lable">Edit
+						Profile</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group">
+							<label for="Change_Work_Site">Work Site</label> <input type="text" class="form-control" id="Change_Work_Site"
+							 placeholder="Work Site">
+						</div>
+						<div class="form-group">
+							<label for="Change_Email">Email</label> <input type="text" class="form-control" id="Change_Email" placeholder="E-mail">
+						</div>
+						<div class="form-group">
+							<label for="Change_Phone_Number">PhoneNumber</label> <input type="text" class="form-control" id="Change_Phone_Number"
+							 placeholder="Phone Number">
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
        
                 <div class="navbar navbar-expand-lg navbar-light bg-light" id="footer">
                     <div class="container">

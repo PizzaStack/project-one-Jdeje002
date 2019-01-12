@@ -1,7 +1,8 @@
 package LogIn;
 
 public class EmployeeLogIn{
-
+	
+	
 	public String employeeLogIn(String userName, String password) {
 		CompareEmployeeToDB ec = new CompareEmployeeToDB();
 	

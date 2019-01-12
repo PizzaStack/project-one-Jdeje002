@@ -19,7 +19,7 @@ public class ViewEmployeeInfo {
 		ctdb.connectToDatabase();
 		
 		try {
-			PreparedStatement ps = ConnectToDB.db.prepareStatement("select * From employee");
+			PreparedStatement ps = ConnectToDB.db.prepareStatement("select  From employee");
 			ResultSet rs = ps.executeQuery();
 			while(rs.next()) {
 				name = rs.getString(2);

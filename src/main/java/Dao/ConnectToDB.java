@@ -12,11 +12,12 @@ public class ConnectToDB {
 	
 	public void connectToDatabase() {
 		
-		try {
-			Class.forName("org.postgresql.Driver");
-		} catch (java.lang.ClassNotFoundException e) {
-			System.out.println(e.getMessage());
-		}
+		 try {
+	            Class.forName("org.postgresql.Driver");
+	        }
+	        catch (java.lang.ClassNotFoundException e) {
+	            System.out.println(e.getMessage());
+	        }
 
 		String url = "jdbc:postgresql://baasu.db.elephantsql.com:5432/mpbhdrzi";
 		String username = "mpbhdrzi";
