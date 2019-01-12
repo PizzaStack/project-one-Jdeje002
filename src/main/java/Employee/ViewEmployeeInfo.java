@@ -46,6 +46,16 @@ public class ViewEmployeeInfo {
 
 	
 	
+	public ViewEmployeeInfo() {
+		super();
+	}
+
+	@Override
+	public String toString() {
+		return "ViewEmployeeInfo [name=" + name + ", location=" + location + ", phoneNumber=" + phoneNumber + ", Email="
+				+ Email + "]";
+	}
+	
 	public void getEmployeeInfo() {
 		ConnectToDB ctdb = new ConnectToDB();
 		ctdb.connectToDatabase();
@@ -53,10 +63,10 @@ public class ViewEmployeeInfo {
 			PreparedStatement ps = ConnectToDB.db.prepareStatement("select name,location,phone_number,email From employee where id = 1");
 			ResultSet rs = ps.executeQuery();
 			while(rs.next()) {
-				name = rs.getString(1);
-				location = rs.getString(2);
-				phoneNumber = rs.getString(3);
-				Email = rs.getString(4);
+				this.name = rs.getString(1);
+				this.location = rs.getString(2);
+				this.phoneNumber = rs.getString(3);
+				this.Email = rs.getString(4);
 				
 			}
 		} catch (SQLException e) {

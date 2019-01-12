@@ -29,13 +29,13 @@ public class LogInServlet extends HttpServlet {
 			GetEmployeeID gEID = new GetEmployeeID();
 			int EmployeeUserId = gEID.getEmployeeID(userName);
 			
-			RequestDispatcher dispatcher = getServletContext()
-				      .getRequestDispatcher("employee.html");
+			RequestDispatcher dispatcher = request
+				      .getRequestDispatcher("/employee.html");
 				    dispatcher.forward(request, response);
 				    
 		} else if (loginType.equals("manager")) {
-			RequestDispatcher dispatcher = getServletContext()
-				      .getRequestDispatcher("management.html");
+			RequestDispatcher dispatcher = request
+				      .getRequestDispatcher("/management.html");
 			dispatcher.forward(request, response);
 		}
 		
