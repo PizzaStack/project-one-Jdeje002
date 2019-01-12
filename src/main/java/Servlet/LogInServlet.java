@@ -2,12 +2,14 @@ package Servlet;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import LogIn.EmployeeLogIn;
+import LogIn.GetEmployeeID;
 
 
 public class LogInServlet extends HttpServlet {
@@ -21,11 +23,20 @@ public class LogInServlet extends HttpServlet {
 		
 		EmployeeLogIn employeeLogIn = new EmployeeLogIn();
 		String loginType = employeeLogIn.employeeLogIn(userName,password);
+
 		
 		if(loginType.equals("employee")) {
-			response.sendRedirect("employee.html");
+			GetEmployeeID gEID = new GetEmployeeID();
+			int EmployeeUserId = gEID.getEmployeeID(userName);
+			
+			RequestDispatcher dispatcher = request
+				      .getRequestDispatcher("/employee.html");
+				    dispatcher.forward(request, response);
+				    
 		} else if (loginType.equals("manager")) {
-			response.sendRedirect("management.html");
+			RequestDispatcher dispatcher = request
+				      .getRequestDispatcher("/management.html");
+			dispatcher.forward(request, response);
 		}
 		
 	}

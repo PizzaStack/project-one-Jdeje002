@@ -8,8 +8,8 @@ public class EmployeeLogIn{
 	
 		String loginType = "";
 		
-		
 		String compareEmployeePassword = ec.CompareUsername(userName);
+		
 		if(compareEmployeePassword == null ) {
 			loginType ="manager";
 			ManagementLogIn ml = new ManagementLogIn();
@@ -24,5 +24,6 @@ public class EmployeeLogIn{
 		
 		return loginType;
 	}
+	
 	
 }

@@ -28,6 +28,6 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>employeeInfoServlet</servlet-name>
-    <url-pattern>/employeeInfoServlet</url-pattern>
+    <url-pattern>/employeeInfo</url-pattern>
   </servlet-mapping>
 </web-app>

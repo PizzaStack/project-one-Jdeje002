@@ -7,25 +7,66 @@ import java.sql.SQLException;
 import Dao.ConnectToDB;
 
 public class ViewEmployeeInfo {
-	protected String name;
-	protected String location;
-	protected String phoneNumber;
-	protected String eMail;
+	private String name;
+	private String location;
+	private String phoneNumber;
+	private String Email;
 	
-	ConnectToDB ctdb = new ConnectToDB();
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getLocation() {
+		return location;
+	}
+
+	public void setLocation(String location) {
+		this.location = location;
+	}
+
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
+	public String getEmail() {
+		return Email;
+	}
+
+	public void setEmail(String Email) {
+		this.Email = Email;
+	}
+
+	
+	
+	public ViewEmployeeInfo() {
+		super();
+	}
+
+	@Override
+	public String toString() {
+		return "ViewEmployeeInfo [name=" + name + ", location=" + location + ", phoneNumber=" + phoneNumber + ", Email="
+				+ Email + "]";
+	}
 	
 	public void getEmployeeInfo() {
-		
+		ConnectToDB ctdb = new ConnectToDB();
 		ctdb.connectToDatabase();
-		
 		try {
-			PreparedStatement ps = ConnectToDB.db.prepareStatement("select  From employee");
+			PreparedStatement ps = ConnectToDB.db.prepareStatement("select name,location,phone_number,email From employee where id = 1");
 			ResultSet rs = ps.executeQuery();
 			while(rs.next()) {
-				name = rs.getString(2);
-				location = rs.getString(3);
-				phoneNumber = rs.getString(4);
-				eMail = rs.getString(5);
+				this.name = rs.getString(1);
+				this.location = rs.getString(2);
+				this.phoneNumber = rs.getString(3);
+				this.Email = rs.getString(4);
 				
 			}
 		} catch (SQLException e) {
