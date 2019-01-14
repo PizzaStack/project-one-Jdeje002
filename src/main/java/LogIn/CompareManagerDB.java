@@ -11,8 +11,11 @@ public class CompareManagerDB {
 	
 	
 	public String CompareUsername(String userName) {
+		
 		ConnectToDB ctdb = new ConnectToDB();
+		
 		ctdb.connectToDatabase();
+		
 		
 		compareManagementPassword = null;
 		

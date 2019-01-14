@@ -1,4 +1,4 @@
-package Employee;
+package Management;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -6,61 +6,53 @@ import java.sql.SQLException;
 
 import Dao.ConnectToDB;
 
-public class ViewEmployeeInfo {
+public class ManagementInfo {
+	private int employee_Id;
 	private String name;
 	private String location;
 	private String phoneNumber;
 	private String Email;
 	
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getLocation() {
-		return location;
-	}
-
-	public void setLocation(String location) {
-		this.location = location;
-	}
-
+	
 	public String getPhoneNumber() {
 		return phoneNumber;
 	}
-
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
-
+	
 	public String getEmail() {
 		return Email;
 	}
-
-	public void setEmail(String Email) {
-		this.Email = Email;
+	public void setEmail(String email) {
+		Email = email;
 	}
+	public int getEmployee_Id() {
+		return employee_Id;
+	}
+	public void setEmployee_Id(int employee_Id) {
+		this.employee_Id = employee_Id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getLocation() {
+		return location;
+	}
+	public void setLocation(String location) {
+		this.location = location;
+	}
+	
 
 	
-	
-	public ViewEmployeeInfo() {
-		super();
-	}
-
-	@Override
-	public String toString() {
-		return "name:" + name + ", location:" + location + ", phoneNumber:" + phoneNumber + ", Email:"
-				+ Email + "";
-	}
-	
-	public void getEmployeeInfo() {
+	public void getManagerInfo() {
 		ConnectToDB ctdb = new ConnectToDB();
 		ctdb.connectToDatabase();
 		try {
-			PreparedStatement ps = ConnectToDB.db.prepareStatement("select name,location,phone_number,email From employee where id = 1");
+			PreparedStatement ps = ConnectToDB.db.prepareStatement("select name,location,phone_number,email From management where id = 1");
 			ResultSet rs = ps.executeQuery();
 			while(rs.next()) {
 				this.name = rs.getString(1);
@@ -77,4 +69,5 @@ public class ViewEmployeeInfo {
 		ctdb.closeDatabase();
 		
 	}
+	
 }

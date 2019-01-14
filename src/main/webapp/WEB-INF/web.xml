@@ -19,7 +19,6 @@
     <servlet-name>EmployeePageForwardServlet</servlet-name>
     <url-pattern>/EmployeePage</url-pattern>
   </servlet-mapping>
-  
   <servlet>
     <description></description>
     <display-name>employeeInfoServlet</display-name>
@@ -29,5 +28,35 @@
   <servlet-mapping>
     <servlet-name>employeeInfoServlet</servlet-name>
     <url-pattern>/employeeInfo</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ManagerInfoServlet</display-name>
+    <servlet-name>ManagerInfoServlet</servlet-name>
+    <servlet-class>Servlet.ManagerInfoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ManagerInfoServlet</servlet-name>
+    <url-pattern>/ManagerInfo</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>EditProfileServlet</display-name>
+    <servlet-name>EditProfileServlet</servlet-name>
+    <servlet-class>Servlet.EditProfileServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EditProfileServlet</servlet-name>
+    <url-pattern>/EditProfile</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>EditManagerInfoServlet</display-name>
+    <servlet-name>EditManagerInfoServlet</servlet-name>
+    <servlet-class>Servlet.EditManagerInfoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EditManagerInfoServlet</servlet-name>
+    <url-pattern>/EditManagerInfo</url-pattern>
   </servlet-mapping>
 </web-app>
