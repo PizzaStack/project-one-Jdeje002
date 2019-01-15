@@ -41,5 +41,5 @@ create table reimbursement_request(
     title varchar(50) not Null,
     description varchar(50),
     amount real not Null,
-    recipet BYTEA not Null
+    receipt BYTEA not Null
 )
