@@ -31,7 +31,7 @@ public class EditProfileServlet extends HttpServlet {
 		String Email = request.getParameter("Email");
 		String phoneNumber= request.getParameter("phoneNumber");
 		
-		System.out.println(location+" "+Email+" "+phoneNumber );
+		
 		UpdatedEmployeeInfo updatedEmployeeInfo = new UpdatedEmployeeInfo();
 		updatedEmployeeInfo.updatedEmployeeInfo(location, Email, phoneNumber);
 		

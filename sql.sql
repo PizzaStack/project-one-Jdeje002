@@ -39,7 +39,7 @@ create table reimbursement_request(
     manangement_id int references management(id),
     manangement_Approval varchar(50) not Null,
     title varchar(50) not Null,
-    description varchar(50),
+    description varchar(550),
     amount real not Null,
     receipt BYTEA not Null
 )

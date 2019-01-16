@@ -59,4 +59,24 @@
     <servlet-name>EditManagerInfoServlet</servlet-name>
     <url-pattern>/EditManagerInfo</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UploadReimbursement</display-name>
+    <servlet-name>UploadReimbursement</servlet-name>
+    <servlet-class>Servlet.UploadReimbursement</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UploadReimbursement</servlet-name>
+    <url-pattern>/UploadReimbursement</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UploadReinbursementServlet</display-name>
+    <servlet-name>UploadReinbursementServlet</servlet-name>
+    <servlet-class>Servlet.UploadReinbursementServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UploadReinbursementServlet</servlet-name>
+    <url-pattern>/UploadReinbursement</url-pattern>
+  </servlet-mapping>
 </web-app>
