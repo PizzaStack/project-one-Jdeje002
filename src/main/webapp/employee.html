@@ -63,22 +63,43 @@
 						</div>
 					</div>
 					<hr>
-					<a href="../index.html" class="btn btn-primary"
+					<a href="index.html" class="btn btn-primary"
 						Id="user_log_out_Btn">Log Out</a>
 				</div>
 			</div>
 			<div class="col-lg-10">
 				<div class="container">
 					<div class="row">
-						<div class="col-lg-3">
-							<button type="button" class="btn btn-primary" data-toggle="modal"
+						
+						<div class="col-md-12">
+								<button type="button" class="btn btn-primary" data-toggle="modal"
 								data-target="#upload_request">Upload Reimbursement
 								Request</button>
-						</div>
-						<div class="col-lg-9">
-							<button type="button" class="btn btn-primary">View
+							<button  id = "btn_View_User_Reimbursement_Request"type="button" class="btn btn-primary">View
 								Reimbursement Request</button>
-							<div id="View_User_Reimbursement_Request"></div>
+						
+							<div class="card">
+								<div class="card-body">
+									<table class="table">
+										<thead>
+										  <tr>
+											<th scope="col">#</th>
+											<th scope="col">Employee_id</th>
+											<th scope="col">Manangement_id</th>
+											<th scope="col">Manangement_Approval</th>
+											<th scope="col">title</th>
+											<th scope="col">description</th>
+											<th scope="col">amount</th>
+											
+										  </tr>
+										</thead>
+										<tbody id="View_User_Reimbursement_Request" >
+										
+							
+										</tbody>
+									  </table>
+								</div>
+							  </div>
 						</div>
 					</div>
 				</div>

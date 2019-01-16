@@ -79,4 +79,14 @@
     <servlet-name>UploadReinbursementServlet</servlet-name>
     <url-pattern>/UploadReinbursement</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DisplayReinbursementServlet</display-name>
+    <servlet-name>DisplayReinbursementServlet</servlet-name>
+    <servlet-class>Servlet.DisplayReinbursementServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DisplayReinbursementServlet</servlet-name>
+    <url-pattern>/DisplayReinbursementServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
