@@ -89,4 +89,24 @@
     <servlet-name>DisplayReinbursementServlet</servlet-name>
     <url-pattern>/DisplayReinbursementServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ReimbursmentApprovalServlet</display-name>
+    <servlet-name>ReimbursmentApprovalServlet</servlet-name>
+    <servlet-class>Servlet.ReimbursmentApprovalServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReimbursmentApprovalServlet</servlet-name>
+    <url-pattern>/ReimbursmentApproval</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DenyReimbursementServlet</display-name>
+    <servlet-name>DenyReimbursementServlet</servlet-name>
+    <servlet-class>Servlet.DenyReimbursementServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DenyReimbursementServlet</servlet-name>
+    <url-pattern>/DenyReimbursement</url-pattern>
+  </servlet-mapping>
 </web-app>
