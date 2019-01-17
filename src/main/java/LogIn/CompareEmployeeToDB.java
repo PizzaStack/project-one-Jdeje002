@@ -13,8 +13,6 @@ public class CompareEmployeeToDB {
 
 	public String CompareUsername(String userName) {
 		ConnectToDB ctdb = new ConnectToDB();
-		
-
 		ctdb.connectToDatabase();
 		try {
 			PreparedStatement ps = ConnectToDB.db
@@ -29,6 +27,7 @@ public class CompareEmployeeToDB {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
 		ctdb.closeDatabase();
 		
 		return compareEmployeePassword;

@@ -26,8 +26,8 @@ public class LogInServlet extends HttpServlet {
 
 		
 		if(loginType.equals("employee")) {
-			GetEmployeeID gEID = new GetEmployeeID();
-			int EmployeeUserId = gEID.getEmployeeID(userName);
+			GetEmployeeID employeeUserId = new GetEmployeeID();
+			int EmployeeUserId = employeeUserId.getEmployeeID(userName);
 			
 			RequestDispatcher dispatcher = request
 				      .getRequestDispatcher("/employee.html");
