@@ -34,7 +34,7 @@ public class DisplayReinbursementServlet extends HttpServlet {
 		
 		List<UploadReimbursementRequest> reimbursementInfo = getReimbursementInfo.getReimbursementInfo();
 		
-
+		
 		
 		
 		JSONArray jsonArray = new JSONArray(reimbursementInfo);
@@ -46,6 +46,7 @@ public class DisplayReinbursementServlet extends HttpServlet {
 		PrintWriter output= response.getWriter();
 		output.print(jsonArray);
 		
+
 		
 	}
 

@@ -5,6 +5,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.http.HttpServlet;
@@ -50,7 +51,9 @@ public class UploadReinbursementServlet extends HttpServlet {
 		System.out.println(description);
 		System.out.println(receipt);
 		
-		
+		RequestDispatcher dispatcher = request
+			      .getRequestDispatcher("/employee.html");
+			    dispatcher.forward(request, response);
 		
 		
 	}

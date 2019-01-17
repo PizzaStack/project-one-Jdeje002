@@ -26,8 +26,7 @@ public class ReimbursmentApprovalServlet extends HttpServlet {
 		
 		RequestDispatcher dispatcher = request
 			      .getRequestDispatcher("/management.html");
-			    dispatcher.forward(request, response);
-		
+		dispatcher.forward(request, response);
 		
 		
 	}
