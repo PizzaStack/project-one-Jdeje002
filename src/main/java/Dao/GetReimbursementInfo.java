@@ -32,6 +32,8 @@ public class GetReimbursementInfo {
 				uploadReimbursementRequest.setTitle(rs.getString(5));
 				uploadReimbursementRequest.setDescription(rs.getString(6));
 				uploadReimbursementRequest.setAmount(rs.getDouble(7));
+				uploadReimbursementRequest.setReciept(rs.getBytes(8));
+				
 				
 				
 				uploadReimbursementRequestObjects.add(uploadReimbursementRequest);

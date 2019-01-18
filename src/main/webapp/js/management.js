@@ -28,8 +28,6 @@ function EmployeeList() {
     xhr.onreadystatechange = function () {
         
         if (this.readyState === 4 && this.status === 200) {
-        	
-           
 
             jsonArray = JSON.parse(xhr.response);
             
@@ -64,7 +62,9 @@ function DisplayReinbursement() {
 			console.log(jsonArray)
 			for(i in jsonArray){
 				json = jsonArray[i];
-				console.log(json.title);
+				console.log(json.reciept)
+				
+				
 				$("#View_User_Reimbursement_Request").append(
 						`
 						<tr>
@@ -75,13 +75,16 @@ function DisplayReinbursement() {
 						<td>${json.title}</td>
 						<td>${json.description}</td>
 						<td>${json.amount}</td>
-						<td>img</td>
-						<td> <button value ="${json.id}" class="btn-approval" >Approve</button></td>
-						<td><button value ="${json.id}" class="btn-deny">Deny</button></td>
-						</tr>		
-										
+						<td><img class="reciept_img" height="290" width="170" "/></td>
+						<td><button type="submit"value ="${json.id}" class="btn-approval" >Approve</button></td>
+						<td><button type="submit"value ="${json.id}" class="btn-deny">Deny</button></td>
+						</tr>						
 						`		
 						)
+					 let base64String = btoa(String.fromCharCode(...new Uint8Array(json.reciept)));
+					 $("td img").attr('src', `data:image/png;base64,${base64String}`);
+				
+				
 			}
 
 		}	
@@ -137,10 +140,12 @@ $(document).ready(function () {
 
     	xhr.onreadystatechange = function(){
     		if (this.readyState === 4 && this.status === 200){}
+    		
+    		
     	}
-    	
-    	
+
     	xhr.send(`id=${val}`);
+    	
     	
     })
     

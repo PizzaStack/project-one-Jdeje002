@@ -1,6 +1,8 @@
 package Servlet;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -18,7 +20,9 @@ public class DenyReimbursementServlet extends HttpServlet {
 		
 		DenyReimbursement denyReimbursement = new DenyReimbursement();
 		denyReimbursement.denyReimbursement(id);
-		
+		RequestDispatcher dispatcher = request
+			      .getRequestDispatcher("/management.html");
+		dispatcher.forward(request, response);
 	}
 
 }
